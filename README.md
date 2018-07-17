@@ -1,8 +1,10 @@
 Conway's Game of Life
+---
 
 This react app is a simple implemenation of Conway's Game of Life.
 
-Your assignment:
+Your assignment
+---
 
 Right now the game board is rendered using 1's to signify cells that are alive,
 and 0's to signify cells that are dead. Your job is to change this app to
