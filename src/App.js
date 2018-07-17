@@ -1,21 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+
+import GameBoard from "./GameBoard";
+
+import Cell from "./Cell";
+
+import "./App.css";
 
 class App extends Component {
+  componentWillMount() {
+    this.gameBoard = new GameBoard(10);
+    this.tick();
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <pre>
+          {this.state.gameBoardRows.map((row, i) => {
+            return <pre key={i}>{row}</pre>;
+          })}
+        </pre>
+        <button onClick={this.tick}>Next Generation</button>
       </div>
     );
   }
+
+  tick = () => {
+    this.gameBoard.tick();
+
+    this.setState({ gameBoardRows: this.gameBoard.rows() });
+  };
 }
 
 export default App;
