@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 import GameBoard from "./GameBoard";
 
-import Cell from "./Cell";
-
 import "./App.css";
+
+import CellRow from "./CellRow";
 
 class App extends Component {
   componentWillMount() {
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <pre>
           {this.state.gameBoardRows.map((row, i) => {
-            return <pre key={i}>{row}</pre>;
+            return <CellRow cells={row} key={i} />;
           })}
         </pre>
         <button onClick={this.tick}>Next Generation</button>

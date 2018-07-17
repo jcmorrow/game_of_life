@@ -1,8 +1,7 @@
 import React from "react";
 
 const Cell = props => {
-  // fill in this body!
-  return null;
+  return <div className={props.alive ? "cell alive" : "cell dead"} />;
 };
 
 export default Cell;
