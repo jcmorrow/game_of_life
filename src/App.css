@@ -1,4 +1,21 @@
+.row {
+  height: 10px;
+}
+
+.cell {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+
+.alive {
+  background: black;
+}
+
+.dead {
+  background: white;
+}
+
 pre {
-  letter-spacing: 10px;
-  line-height: 6px;
+  letter-spacing: 15px;
 }

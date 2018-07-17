@@ -16,7 +16,6 @@ called `Cell` to act as a framework for your solution.  Feel free to change or
 not change any of the following files:
 
 - App.js
-- App.css
 - Cell.js
 
 You can also add any additional files or components you think would be helpful!
